@@ -1,0 +1,69 @@
+﻿<html>
+	<meta charset="utf-8">
+	<script src="../../../vue.js"></script>
+	<link rel="stylesheet" href="main.css">
+	<body>
+		<section id="app">
+			<link rel="stylesheet" :href="css">
+			<div class="b-title">
+				{{ title }}<br>
+				<span>{{ titleInfo }}</span>
+			</div>
+		
+			<section class="items">
+				<div class="item" v-for="floor in floors" @click="enter(floor)">
+					<div>{{ floor }}</div>
+				</div>
+			</section>
+			
+			<div class="b3-close" id="close-button" @click="exit">X</div>
+		</section>
+	</body>
+</html>
+
+
+<script>
+const app = new Vue({
+	el: '#app',
+	data: {
+		id: 0,
+		title: "LS Hospital Garage",
+		css: "",
+		titleInfo: "choose the floor", 
+		floors: [-1, -2, -3, -4, -5],
+
+	},
+	methods: {
+		enter: function(floor) {
+			mp.trigger("cMisc-CallServerEvent", "sGarage-EnterVisitorsGarage", this.id, floor);
+			this.exit();
+		},
+		
+		exit: function() {
+			mp.trigger("cCloseCefAndDestroyCam"); 
+		},
+	}
+});
+
+
+
+function loadRusLang() {
+	app.titleInfo = "Выберите этаж";
+}
+
+function loadGerLang() {
+	app.titleInfo = "wählen sie das wort";
+}
+
+function loadBrLang() {
+	app.titleInfo = "Escolha o PISO";
+}
+
+function loadZhsNLang() {
+	app.titleInfo = "选择楼层";
+}
+
+function loadZhtLang() {
+	app.titleInfo = "選擇樓層";
+}
+</script>
