@@ -1,7 +1,7 @@
 # Ifxoss_ragemp
 Ifxoss rage server is open source rage mp role play server for gta5.For rage mp see https://rage.mp/ .
 
-It is base on MarkCavalli's works(https://github.com/MarkCavalli/rageserver),and with bsd license.
+It is base on MarkCavalli's works(https://github.com/MarkCavalli/rageserver ),and with bsd license.
 
 # Installation guide:
 1. Install Ragemp server.
