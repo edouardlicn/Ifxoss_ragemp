@@ -2,28 +2,32 @@ const nodemailer = require("nodemailer");
 
 
 class MailerSingleton {
-    constructor() {
+    constructor() { 
+    
         this.transporter = nodemailer.createTransport({
-            service: 'gmail',
+            host: 'smtp.hostname.com', //smtp server address
+            port: 465,     //smtp port on server above
+            secure: true, // true for 465, false for other ports
             auth: {
-                user: 'mail@gmail.com',
-                pass: 'pass'
+            user: 'username', // generated ethereal user
+            pass: 'passwd' // generated ethereal password
             }
         });
+
         
         this.transporter.verify((error, success) => {
             if (error) {
                 console.log(error);
             } 
             else {
-                console.log('EMAIL SERVER READY!');
+                console.log('EMAIL SERVER ONLINE!');
             }
         });
     }
 
     
     getMailAdress() {
-        return 'Open Source RP server <mail@gmail.com>';
+        return 'Open Source RP server <mail@hostname.com>';
     }
 
     isEmailValid(email) {
