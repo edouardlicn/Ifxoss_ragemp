@@ -1,3 +1,20 @@
+/* 
+  sExample: {    
+    	example: {
+			eng: 'connected',
+			rus: 'присоединился',
+			ger: 'verbunden',
+			br: 'conectado', 
+			zhs: '已上线',
+			zht: '已上線',
+		},    
+    
+  },
+
+*/
+
+
+
 const i18n = {
 
 	basic: {
@@ -202,7 +219,7 @@ const i18n = {
 
 	},
   
-   sAuth: {    
+  sAuth: {    
     	checkEmail: {
 			eng: 'Please check your mail box.',
 			rus: '',
@@ -217,30 +234,30 @@ const i18n = {
 
   sLogin: {    
     	connected: {
-			eng: 'connected',
-			rus: 'присоединился',
-			ger: 'verbunden',
-			br: 'conectado', 
-			zhs: '已上线',
-			zht: '已上線',
+			eng: '!{#00ed00}connected',
+			rus: '!{#00ed00}присоединился',
+			ger: '!{#00ed00}verbunden',
+			br: '!{#00ed00}conectado', 
+			zhs: '!{#00ed00}已上线',
+			zht: '!{#00ed00}已上線',
 		},    
     
    		disconnected: {
-			eng: 'disconnected',
-			rus: 'отключился',
-			ger: 'getrennt',
-			br: 'desconectou', 
-			zhs: '已下线',
-			zht: '已離線',
+			eng: '!{#ed4300}disconnected',
+			rus: '!{#ed4300}отключился',
+			ger: '!{#ed4300}getrennt',
+			br: '!{#ed4300}desconectou', 
+			zhs: '!{#ed4300}已下线',
+			zht: '!{#ed4300}已離線',
 		},
 		
 		annoucePlayerMenu: {
-			eng: 'Press M button to open menu',
+			eng: '!{#00ed00}Press M button  !{#FFFFFF}to open menu for more helps.',
 			rus: 'Открыть меню: кнопка М',
 			ger: '',
 			br: '', 
-			zhs: 'M键开启菜单以获取更多帮助',
-			zht: 'M鍵開啟菜單以獲取更多幫助。',
+			zhs: '!{#00ed00}M键开启菜单 !{#FFFFFF}以获取更多帮助',
+			zht: '!{#00ed00}M鍵開啟菜單 !{#FFFFFF}以獲取更多幫助。',
 		},
     
 		annouceSpawnVehicle: {
@@ -289,6 +306,28 @@ const i18n = {
 		},
 
 	},
+
+  sPlayer: { 
+  
+    tpHelp: {
+			eng: '!{#FF8555}SYNTAX: !{#FFFFFF}/tp [x] [y] [z]',
+			rus: '',
+			ger: '',
+			br: '', 
+			zhs: '!{#FF8555}语法: !{#FFFFFF}/tp [x] [y] [z]',
+			zht: '!{#FF8555}語法: !{#FFFFFF}/tp [x] [y] [z]',
+		}, 
+         
+    	tpOK: {
+			eng: '!{#00ed00}Teleported',
+			rus: '',
+			ger: '',
+			br: '', 
+			zhs: '!{#00ed00}瞬移完成',
+			zht: '!{#00ed00}瞬移完成',
+		},    
+    
+  },
 
 	sMoney: {
 		enterATM: {

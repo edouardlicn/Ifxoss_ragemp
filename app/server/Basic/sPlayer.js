@@ -144,6 +144,8 @@ const playerSingleton = new PlayerSingleton();
 module.exports = playerSingleton;
 
 
+//Admin command.
+
 mp.events.addCommand({
     'save' : (player) => {
         if (!player.loggedIn || player.adminlvl < 1) return;
@@ -160,6 +162,23 @@ mp.events.addCommand({
         const str = `x: ${misc.roundNum(pos.x, 3)}, y: ${misc.roundNum(pos.y, 3)}, z: ${misc.roundNum(pos.z, 3)}, rot: ${misc.roundNum(rot, 2)}`;
         player.outputChatBox(str);
         misc.log.debug(str);
-    },
+    }, 
+ 
+
+    'tp' : (player, _, x, y, z) => { 
+         if (player.adminlvl < 1) return;
+         x = parseFloat(x);
+         y = parseFloat(y);
+         z = parseFloat(z);
+         if (isNaN(x) || isNaN(y) || isNaN(z)) {
+            player.outputChatBox(`${i18n.get('sPlayer', 'tpHelp', player.lang)}`);
+            return;
+         } 
+         player.position = new mp.Vector3(x, y, z);
+         player.outputChatBox(`${i18n.get('sPlayer', 'tpOK', player.lang)}`);       
+        
+    },   
+
+
     
 });   
