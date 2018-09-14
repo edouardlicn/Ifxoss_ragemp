@@ -18,6 +18,33 @@
 const i18n = {
 
 	basic: {
+     admin: {
+			eng: 'Admin',
+			rus: '',
+			ger: '',
+			br: '', 
+			zhs: '管理员',
+			zht: '管理員',
+		}, 
+    
+    giveyou: {
+			eng: 'give you',
+			rus: '',
+			ger: '',
+			br: '', 
+			zhs: '给你',
+			zht: '給你',
+		},
+    
+    to: {
+			eng: 'to',
+			rus: '',
+			ger: '',
+			br: '', 
+			zhs: '予',
+			zht: '予',
+		},
+  
 		success: {
 			eng: 'Success',
 			rus: 'Успешно',
@@ -318,13 +345,40 @@ const i18n = {
 			zht: '!{#FF8555}語法: !{#FFFFFF}/tp [x] [y] [z]',
 		}, 
          
-    	tpOK: {
+    tpOK: {
 			eng: '!{#00ed00}Teleported',
 			rus: '',
 			ger: '',
 			br: '', 
 			zhs: '!{#00ed00}瞬移完成',
 			zht: '!{#00ed00}瞬移完成',
+		},  
+    
+    godmoneyHelp: {
+			eng: '!{#FF8555}SYNTAX: !{#FFFFFF}/godmoney [player ID] [amount]',
+			rus: '',
+			ger: '',
+			br: '', 
+			zhs: '!{#FF8555}语法: !{#FFFFFF}/godmoney [player ID] [amount]',
+			zht: '!{#FF8555}語法: !{#FFFFFF}/godmoney [player ID] [amount]',
+		}, 
+    
+    godmoneyNouser: {
+			eng: '!{#E03232}ERROR: !{#FFFFFF}Player NOT found.',
+			rus: '',
+			ger: '',
+			br: '', 
+			zhs: '!{#E03232}错误: !{#FFFFFF}用户不存在.',
+			zht: '!{#E03232}錯誤: !{#FFFFFF}用戶不存在.',
+		}, 
+    
+    godmoneyNotol: {
+			eng: '!{#E03232}ERROR: !{#FFFFFF}Player is NOT online.',
+			rus: '',
+			ger: '',
+			br: '', 
+			zhs: '!{#E03232}ERROR: !{#FFFFFF}Player is NOT online.',
+			zht: '!{#E03232}錯誤: !{#FFFFFF}用戶不在綫.',
 		},    
     
   },

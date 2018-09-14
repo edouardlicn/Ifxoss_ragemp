@@ -143,15 +143,23 @@ class PlayerSingleton {
 const playerSingleton = new PlayerSingleton();
 module.exports = playerSingleton;
 
+//Save manually.
+
+mp.events.addCommand({
+
+    'save' : (player) => {
+        if (!player.loggedIn) return;
+        playerSingleton.saveAccount(player);
+        player.outputChatBox(`${i18n.get('sLogin', 'saveGame', player.lang)}`);
+    },
+        
+    
+}); 
 
 //Admin command.
 
 mp.events.addCommand({
-    'save' : (player) => {
-        if (!player.loggedIn || player.adminlvl < 1) return;
-        playerSingleton.saveAccount(player);
-        player.outputChatBox(`${i18n.get('sLogin', 'saveGame', player.lang)}`);
-    }, 
+ 
     
     'pos' : (player) => { 
         if (player.adminlvl < 1) return;
@@ -177,7 +185,29 @@ mp.events.addCommand({
          player.position = new mp.Vector3(x, y, z);
          player.outputChatBox(`${i18n.get('sPlayer', 'tpOK', player.lang)}`);       
         
-    },   
+    },  
+    
+    'godmoney' : (player, _, targetID, amount) => {
+         if (player.adminlvl < 1) return;
+         targetID = Number(targetID);
+         amount = Number(amount);
+         let targetPlayer = mp.players.at(targetID);
+         if (isNaN(targetID) || isNaN(amount)) {
+            player.outputChatBox(`${i18n.get('sPlayer', 'godmoneyHelp', player.lang)}`);
+            return;
+         }
+         if (!targetPlayer) {
+            player.outputChatBox(`${i18n.get('sPlayer', 'godmoneyNouser', player.lang)}`);
+            return;
+         }
+         targetPlayer.changeMoney(amount);
+         misc.log.debug(`[godmoney] ${player.name}(${player.id}) gave $${amount} to ${targetPlayer.name}(${targetPlayer.id}).`);
+         if (targetPlayer.isLoggedIn) {
+            targetPlayer.outputChatBox(`Admin ${player.name}(${player.id}) give you !{#72CC72}$${amount}.`);
+         } 
+         player.outputChatBox(`Give !{#72CC72}$${amount} !{#FFFFFF}to ${targetPlayer.name}(${targetPlayer.id}).`);
+         
+    },
 
 
     
