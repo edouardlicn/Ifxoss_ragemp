@@ -143,18 +143,31 @@ class PlayerSingleton {
 const playerSingleton = new PlayerSingleton();
 module.exports = playerSingleton;
 
-//Save manually.
+//normal users command.
 
 mp.events.addCommand({
 
     'save' : (player) => {
         if (!player.loggedIn) return;
         playerSingleton.saveAccount(player);
-        player.outputChatBox(`${i18n.get('sLogin', 'saveGame', player.lang)}`);
+        player.outputChatBox(`${i18n.get('sPlayer', 'saveGame', player.lang)}`);
     },
-        
+    
+    'pos' : (player) => { 
+        if (!player.loggedIn) return;
+        const pos = player.position;
+        let rot;
+        if (player.vehicle) rot = player.vehicle.rotation.z
+        else rot = player.heading;
+        const str = `x: ${misc.roundNum(pos.x, 3)}, y: ${misc.roundNum(pos.y, 3)}, z: ${misc.roundNum(pos.z, 3)}, rot: ${misc.roundNum(rot, 2)}`;
+        player.outputChatBox(str);
+        misc.log.debug(str);
+    },     
     
 }); 
+
+
+
 
 //Admin command.
 
@@ -187,28 +200,17 @@ mp.events.addCommand({
         
     },  
     
-    'godmoney' : (player, _, targetID, amount) => {
+
+         
+    
+    'printm' : (player, _, targetID, amount) => {
          if (player.adminlvl < 1) return;
          targetID = Number(targetID);
          amount = Number(amount);
-         let targetPlayer = mp.players.at(targetID);
-         if (isNaN(targetID) || isNaN(amount)) {
-            player.outputChatBox(`${i18n.get('sPlayer', 'godmoneyHelp', player.lang)}`);
-            return;
-         }
-         if (!targetPlayer) {
-            player.outputChatBox(`${i18n.get('sPlayer', 'godmoneyNouser', player.lang)}`);
-            return;
-         }
-         targetPlayer.changeMoney(amount);
-         misc.log.debug(`[godmoney] ${player.name}(${player.id}) gave $${amount} to ${targetPlayer.name}(${targetPlayer.id}).`);
-         if (targetPlayer.isLoggedIn) {
-            targetPlayer.outputChatBox(`Admin ${player.name}(${player.id}) give you !{#72CC72}$${amount}.`);
-         } 
-         player.outputChatBox(`Give !{#72CC72}$${amount} !{#FFFFFF}to ${targetPlayer.name}(${targetPlayer.id}).`);
+         let playert = mp.players.at(targetID); //https://wiki.rage.mp/index.php?title=Pool::at
+         console.log(`${playert.name}`);
          
     },
-
 
     
 });   

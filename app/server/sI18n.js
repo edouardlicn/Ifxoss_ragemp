@@ -270,12 +270,12 @@ const i18n = {
 		},    
     
    		disconnected: {
-			eng: '!{#ed4300}disconnected',
-			rus: '!{#ed4300}отключился',
-			ger: '!{#ed4300}getrennt',
-			br: '!{#ed4300}desconectou', 
-			zhs: '!{#ed4300}已下线',
-			zht: '!{#ed4300}已離線',
+			eng: '!{#FF8555}disconnected',
+			rus: '!{#FF8555}отключился',
+			ger: '!{#FF8555}getrennt',
+			br: '!{#FF8555}desconectou', 
+			zhs: '!{#FF8555}已下线',
+			zht: '!{#FF8555}已離線',
 		},
 		
 		annoucePlayerMenu: {
@@ -297,12 +297,12 @@ const i18n = {
 		},
 		
 		annouceGlobalChat: {
-			eng: 'Global chat: /g [message]',
-			rus: 'Глобальный чат: /g [сообщение]',
-			ger: 'Globaler Chat: / g [Nachricht]',
-			br: 'Chat Global: /g [mensagem]', 
-			zhs: '全局聊天：/g [message]',
-			zht: '全域聊天：/g [message]',
+			eng: '!{#00ed00}Global chat with others online: !{#FFFFFF}/g [message]',
+			rus: '!{#00ed00}Глобальный чат: !{#FFFFFF}/g [сообщение]',
+			ger: '!{#00ed00}Globaler Chat: !{#FFFFFF}/ g [Nachricht]',
+			br: '!{#00ed00}Chat Global: /g [mensagem]', 
+			zhs: '!{#00ed00}与服务器上的其它玩家聊天：!{#FFFFFF}/g [message]',
+			zht: '!{#00ed00}與飼服器上的其它玩家聊天：!{#FFFFFF}/g [message]',
 		}, 
 	
 		annouceOldUser: {
@@ -314,14 +314,6 @@ const i18n = {
 			zht: '如果你有舊版服務器帳戶且希望恢復它，在聊天欄留下你的用戶名和需求。我會在日誌中檢查。',
 		},
 		
-		saveGame: {
-			eng: 'Account successfully saved!',
-			rus: 'Аккаунт сохранен!',
-			ger: 'Konto erfolgreich gespeichert!',
-			br: 'Conta salva com sucesso!', 
-			zhs: '帐号成功保存。',
-			zht: '帳戶成功保存。',
-		}, 
     
     accNotexist: {
 			eng: 'This account doesnt exist',
@@ -335,6 +327,15 @@ const i18n = {
 	},
 
   sPlayer: { 
+  
+    saveGame: {
+			eng: '!{#00ed00}Account successfully saved!',
+			rus: '!{#00ed00}Аккаунт сохранен!',
+			ger: '!{#00ed00}Konto erfolgreich gespeichert!',
+			br: '!{#00ed00}Conta salva com sucesso!', 
+			zhs: '!{#00ed00}帐号成功保存。',
+			zht: '!{#00ed00}帳戶成功保存。',
+		}, 
   
     tpHelp: {
 			eng: '!{#FF8555}SYNTAX: !{#FFFFFF}/tp [x] [y] [z]',
