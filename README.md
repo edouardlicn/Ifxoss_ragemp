@@ -18,3 +18,5 @@ It is base on MarkCavalli's works(https://github.com/MarkCavalli/rageserver ),an
 8. Start a server
 
 THEN ENJOY.
+
+For user manual,see wiki of this project.
