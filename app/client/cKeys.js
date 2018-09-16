@@ -5,9 +5,9 @@ mp.keys.bind(69, false, function() {
     mp.events.callRemote('sKeys-E');
 });
 
-mp.keys.bind(96, false, function() {
+mp.keys.bind(79, false, function() {
     if (mp.gui.cursor.visible) return;
-    mp.events.callRemote('sKeys-Num0');
+    mp.events.callRemote('sKeys-O');
 });
 
 mp.keys.bind(97, false, function() {
@@ -60,9 +60,9 @@ mp.keys.bind(115, false, function() {
     mp.events.callRemote('sKeys-F4');
 });
 
-mp.keys.bind(107, false, function() {
+mp.keys.bind(76, false, function() {
     if (mp.gui.cursor.visible) return;
-    mp.events.callRemote('sKeys-Num+');
+    mp.events.callRemote('sKeys-L');
 });
 
 mp.keys.bind(77, false, function() {

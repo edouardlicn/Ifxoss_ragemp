@@ -10,8 +10,8 @@ class HospitalBuilding extends sBuilding {
 			inPos: {x: 275.446, y: -1361.11, z: 24.5378, rot: 46.77, dim: 0},
 		
 			outBlipId: 153,
-			outBlipCol: 1,
-			outBlipName: "Hospital",
+			outBlipCol: 75,
+			outBlipName: 'Hospital',
 			outBlipScale: 1,
 			outShapeR: 1,
 			outMarkerId: 1,

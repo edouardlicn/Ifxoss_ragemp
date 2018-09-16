@@ -172,19 +172,7 @@ mp.events.addCommand({
 //Admin command.
 
 mp.events.addCommand({
- 
-    
-    'pos' : (player) => { 
-        if (player.adminlvl < 1) return;
-        const pos = player.position;
-        let rot;
-        if (player.vehicle) rot = player.vehicle.rotation.z
-        else rot = player.heading;
-        const str = `x: ${misc.roundNum(pos.x, 3)}, y: ${misc.roundNum(pos.y, 3)}, z: ${misc.roundNum(pos.z, 3)}, rot: ${misc.roundNum(rot, 2)}`;
-        player.outputChatBox(str);
-        misc.log.debug(str);
-    }, 
- 
+  
 
     'tp' : (player, _, x, y, z) => { 
          if (player.adminlvl < 1) return;
@@ -200,8 +188,6 @@ mp.events.addCommand({
         
     },  
     
-
-         
     
     'printm' : (player, _, targetID, amount) => {
          if (player.adminlvl < 1) return;

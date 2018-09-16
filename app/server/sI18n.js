@@ -288,12 +288,12 @@ const i18n = {
 		},
     
 		annouceSpawnVehicle: {
-			eng: 'Spawn a vehicle: /veh',
+			eng: 'Spawn a vehicle: /veh,L to unlock,O to start engine.',
 			rus: 'Создать транспорт: /veh',
 			ger: '',
 			br: 'Criar um veiculo: /veh', 
-			zhs: '请求一台载具：/veh',
-			zht: '请求一辆载具：/veh',
+			zhs: '请求一台载具：/veh，L键开锁，O键开启发动机。',
+			zht: '请求一辆载具：/veh，L鍵開鎖，O鍵開啟引擎。',
 		},
 		
 		annouceGlobalChat: {
@@ -494,21 +494,21 @@ const i18n = {
 		},
     
 		helpUnlock: {
-			eng: 'Unlock: num +',
-			rus: 'Открыть: num +',
-			ger: 'Entsperren: num +',
-			br: 'Destravar: num +', 
-			zhs: '开锁: 数字小键盘 +',
-			zht: '開鎖: 數字小鍵盤 +',
+			eng: 'Unlock: L',
+			rus: 'Открыть: L',
+			ger: 'Entsperren: L',
+			br: 'Destravar: L', 
+			zhs: '开锁: L',
+			zht: '開鎖: L',
 		},
 		
 		helpEngine: {
-			eng: 'Toggle engine: num 0',
-			rus: 'Завести двигатель: num 0',
-			ger: 'Toggle-Engine: Nummer 0',
-			br: 'Ligar o motor: num 0', 
-			zhs: '切换发动机：数字小键盘 0',
-			zht: '切換引擎: 數字小鍵盤 0',
+			eng: 'Toggle engine: O',
+			rus: 'Завести двигатель: O',
+			ger: 'Toggle-Engine: O',
+			br: 'Ligar o motor: O', 
+			zhs: '切换发动机：O',
+			zht: '切換引擎: O',
 		},
 		
 		spawnedFaggio2: {
@@ -635,6 +635,16 @@ const i18n = {
 	},
 
 	sHospital: {
+  
+		hospitalBlip: {
+			eng: 'Hospital',
+			rus: '',
+			ger: '',
+			br: '', 
+			zhs: '医院',
+			zht: '病院',
+		}, 
+  
 		needHelp: {
 			eng: 'You need a medical help',
 			rus: 'Вам нужна медицинская помощь',
@@ -676,8 +686,8 @@ const i18n = {
 			rus: 'Вы завершили лечение',
 			ger: 'Du hast den Heilungsprozess beendet',
 			br: 'Você terminou o processo de cicatrização', 
-			zhs: '你结束了治疗过程',
-			zht: '你結束了治療過程',
+			zhs: '你出院了。',
+			zht: '你出院了。',
 		},
 
 		isntHealing: {

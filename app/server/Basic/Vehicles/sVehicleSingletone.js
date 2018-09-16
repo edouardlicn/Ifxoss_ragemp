@@ -29,12 +29,14 @@ class VehicleSingleton {
 				if (fuel <= 0.1) vehicle.engine = false;
 			},
 
-			"sKeys-Num0" : (player) => {
+			//"sKeys-Num0" : (player) => {
+      "sKeys-O" : (player) => {
 				if (!player.loggedIn || !player.isDriver() || player.vehicle.fuel <= 0.1) return;
 				player.vehicle.engine = !player.vehicle.engine;
 			},
 
-			"sKeys-Num+" : (player) => {
+			//"sKeys-Num+" : (player) => {
+      "sKeys-L" : (player) => {
 				if (!player.loggedIn) return;
 				const vehicle = this.getNearestPlayerVehicleInRange(player, 50);
 				if (vehicle) vehicle.toggleDoorsLock(player);
