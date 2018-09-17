@@ -5,20 +5,25 @@
 	<body>
 		<section class="app" id="app">
 			<section>
-				<div class="signup-b">
+				<div class="signup-b"> 
+          <div class="header">Ifxoss Rage server</div>
+          <p>
 					<input type="email" class="textinput" placeholder="Email" v-model="enteredMail" :disabled="showCode" autofocus>
 					<input type="password" class="textinput" placeholder="Password" v-model="enteredPass" :disabled="showCode">
+          
 					<div class="code-b" v-if="showCode">
 						<input type="text" class="textinput" @input="verifyCode" v-model="enteredCode">
 						<div class="button" @click="mailGetCode">Get code</div>
 					</div>
 					<div class="button" @click="login" v-if="!showCode">Log in</div>
+          <div >https://github.com/edouardlicn/Ifxoss_ragemp</div>
 				</div>
 				<div class="error-message" v-if="errorMessage">{{ errorMessage }}</div>
 				<div class="error-message" style="background: limegreen;" v-if="infoMessage">{{ infoMessage }}</div>
 			   	<div class="top-button" style="right: 0; left: auto;" @click="goToRegWindow">Create new account</div>
+          
 			</section>
-		</section>
+
 	</body>
 </html>
 

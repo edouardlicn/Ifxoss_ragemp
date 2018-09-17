@@ -27,7 +27,7 @@ class MailerSingleton {
 
     
     getMailAdress() {
-        return 'Open Source RP server <mail@hostname.com>';
+        return 'mail@hostname.com'; //some smpt server need to set this or send mail fail and rp server crash.
     }
 
     isEmailValid(email) {

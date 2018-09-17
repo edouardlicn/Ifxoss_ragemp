@@ -1,3 +1,6 @@
+//On client side it only show other player's blips in minimap.For long range it have to move to server side.
+
+
 const Natives = {
     SET_BLIP_CATEGORY: "0x1b43a8c070cad58c",
     SHOW_HEADING_INDICATOR_ON_BLIP: "0x7fb3ef6fd3b188b7"

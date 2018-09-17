@@ -10,6 +10,19 @@
 body {
     background: transparent;
 }
+
+.header{
+    font-size: 30px;
+}
+
+.footer{
+    font-size: 15px;
+    width:600px;
+    height:50px;  /*设置div的大小*/
+    /*border:4px solid #beceeb; /*为了便于观察，显示出边框*/
+    display:table-cell; 
+    vertical-align:bottom;
+}
   
 .app {
     position: fixed;
@@ -47,9 +60,11 @@ body {
 }
   
 .signup-b {
+    background: rgba(255, 255, 255, 0.1);
     overflow: hidden;
     padding: 1.5vw;
     border: 1px solid #ddd;
+    width: 400px;
 }
   
 .button {
