@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: 2018-09-18 19:11:51
+-- Generation Time: 2018-09-18 19:46:03
 -- 服务器版本： 10.1.34-MariaDB-0ubuntu0.18.04.1
 -- PHP Version: 7.0.31-1+ubuntu18.04.1+deb.sury.org+1
 
@@ -95,7 +95,7 @@ CREATE TABLE `cheapcardealership` (
 --
 
 INSERT INTO `cheapcardealership` (`id`, `newCarCoord`) VALUES
-(3, NULL);
+(3, '{\"x\":-59.1662712097168,\"y\":-1117.2713623046875,\"z\":26.163053512573242,\"rot\":357.8799743652344,\"dim\":0}');
 
 -- --------------------------------------------------------
 
