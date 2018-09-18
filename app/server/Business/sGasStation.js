@@ -177,6 +177,7 @@ mp.events.addCommand({
 		const query2 = misc.query(`INSERT INTO gasstation (id) VALUES ('${id}');`);	
 		await Promise.all([query1, query2]);
 		player.outputChatBox("!{#4caf50} Gas Station successfully created!");
+    player.outputChatBox("!{#4caf50} Now do /setbusbuyermenu [id] and other commands!");
 	},	
 
 	'setgasstationfillingpos' : async (player, fullText, id, radius) => {

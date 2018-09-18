@@ -97,6 +97,7 @@ mp.events.addCommand({
 		const query2 = misc.query(`INSERT INTO clothingshop (id) VALUES ('${id}');`);	
 		await Promise.all([query1, query2]);
 		player.outputChatBox("!{#4caf50} Clothing shop successfully created!");
+    player.outputChatBox("!{#4caf50} Now do /setbusbuyermenu [id] and other commands!");
 	},	
 
 	'setchbuyerstandcoord' : async (player, id) => {

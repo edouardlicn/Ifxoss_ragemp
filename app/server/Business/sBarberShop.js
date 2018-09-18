@@ -114,6 +114,7 @@ mp.events.addCommand({
 		const query2 = misc.query(`INSERT INTO barbershop (id) VALUES ('${id}');`);	
 		await Promise.all([query1, query2]);
 		player.outputChatBox("!{#4caf50} Barber shop successfully created!");
+    player.outputChatBox("!{#4caf50} Now do /setbusbuyermenu [id] and other commands!");
 	},	
 
 	'setbscamdata' : async (player, id) => {
