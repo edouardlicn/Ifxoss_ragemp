@@ -21,7 +21,7 @@ const i18n = {
      admin: {
 			eng: 'Admin',
 			rus: '',
-			ger: '',
+			ger: 'Admin',
 			br: '', 
 			zhs: '管理员',
 			zht: '管理員',
@@ -30,7 +30,7 @@ const i18n = {
     giveyou: {
 			eng: 'give you',
 			rus: '',
-			ger: '',
+			ger: 'gebe dir',
 			br: '', 
 			zhs: '给你',
 			zht: '給你',
@@ -39,7 +39,7 @@ const i18n = {
     to: {
 			eng: 'to',
 			rus: '',
-			ger: '',
+			ger: 'zu',
 			br: '', 
 			zhs: '予',
 			zht: '予',
@@ -111,7 +111,7 @@ const i18n = {
 		needMoreLoyality2: {
 			eng: 'loyality points',
 			rus: 'очков лояльности',
-			ger: 'treuepunkte',
+			ger: 'Treuepunkte',
 			br: 'pontos de fidelidade', 
 			zhs: '忠诚点数',
 			zht: '忠誠點數',
@@ -156,7 +156,7 @@ const i18n = {
 		toExit: {
 			eng: 'to exit',
 			rus: 'чтобы выйти',
-			ger: 'exit',
+			ger: 'verlassen',
 			br: 'para sair', 
 			zhs: '离开',
 			zht: '離開',
@@ -174,7 +174,7 @@ const i18n = {
 		toExitGarage: {
 			eng: 'to exit garage',
 			rus: 'чтобы покинуть гараж',
-			ger: 'garage verlassen',
+			ger: 'Garage verlassen',
 			br: 'para sair da garagem', 
 			zhs: '离开车库',
 			zht: '離開車庫',
@@ -183,7 +183,7 @@ const i18n = {
 		toCallLift: {
 			eng: 'to call lift',
 			rus: 'чтобы вызвать лифт',
-			ger: 'um Aufzug zu rufen',
+			ger: 'um den Aufzug zu rufen',
 			br: 'chamar elevador', 
 			zhs: '使用电梯',
 			zht: '使用電梯',
@@ -210,7 +210,7 @@ const i18n = {
 		youRejectedOffer: {
 			eng: 'You rejected offer by player',
 			rus: 'Вы отклонили предложение игрока',
-			ger: 'Du hast das Angebot von Spieler abgelehnt',
+			ger: 'Du hast das Angebot von dem Spieler abgelehnt',
 			br: 'Você rejeitou a oferta pelo jogador', 
 			zhs: '你拒绝了offer（来自玩家',
 			zht: '你拒絕了offer（來自玩家',
@@ -219,7 +219,7 @@ const i18n = {
 		rejectedYourOffer: {
 			eng: 'rejected your offer',
 			rus: 'отклонил(а) ваше предложение',
-			ger: 'hat Ihr Angebot abgelehnt',
+			ger: 'hat dein Angebot abgelehnt',
 			br: 'rejeitou sua oferta', 
 			zhs: '拒绝了你的offer',
 			zht: '拒絕了你的offer',
@@ -228,7 +228,7 @@ const i18n = {
 		confirmedYourOffer: {
 			eng: 'confirmed your offer',
 			rus: 'принял(а) ваше предложение',
-			ger: 'bestätigte Ihr Angebot',
+			ger: 'bestätigte dein Angebot',
 			br: 'confirmou sua oferta', 
 			zhs: '接受了你的offer',
 			zht: '接受了你的offer',
@@ -237,7 +237,7 @@ const i18n = {
 		youConfirmedOffer: {
 			eng: 'You confirmed offer by player',
 			rus: 'Вы приняли предложение игрока',
-			ger: 'Du hast das Angebot von Spieler bestätigt',
+			ger: 'Du hast das Angebot von dem Spieler bestätigt',
 			br: 'Você confirmou a oferta pelo jogador', 
 			zhs: '你接受了offer（来自玩家',
 			zht: '你接受了offer（來自玩家',
@@ -250,7 +250,7 @@ const i18n = {
     	checkEmail: {
 			eng: 'Please check your mail box.',
 			rus: '',
-			ger: '',
+			ger: 'Bitte überprüfe deine Posteingang.',
 			br: '', 
 			zhs: '请注意查收邮件。',
 			zht: '請注意查收郵件。',
