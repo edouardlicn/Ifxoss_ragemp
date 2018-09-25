@@ -9,7 +9,7 @@ require('./Business/sCommercialCarDealership');
 require('./Business/sGasStation');
 require('./Jobs/sOrangeCollector');
 require('./Jobs/sCluckinBellCourier');
-require('./Jobs/sPizza'); //currently does not work
+// require('./Jobs/sPizza'); //currently does not work
 require('./Factions/Police/sPolice');
 require('./Basic/sMenu');
 require('./Basic/sGPS');
