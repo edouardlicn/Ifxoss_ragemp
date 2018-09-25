@@ -98,12 +98,12 @@ class ATMSingletone {
 		this.createATM(2683, 3286.5, 55.21);
 		this.createATM(-611.92, -704.75, 31.26);
 		this.createATM(-614.6, -704.75, 31.26);
-    	this.createATM(-526.679, -1222.894, 18.455);
-		this.createATM(2559.559, 350.864, 108.622); 
-		this.createATM(4.792, -919.794, 29.557);
-		this.createATM(-203.802, -861.482, 30.268);
-		this.createATM(-303.134, -829.773, 32.417); 
-    	this.createATM(1171.759, 2701.804, 38.175); 
+    this.createATM(-526.679, -1222.894, 18.455);
+    this.createATM(2559.559, 350.864, 108.622); 
+    this.createATM(4.792, -919.794, 29.557);
+    this.createATM(-203.802, -861.482, 30.268);
+    this.createATM(-303.134, -829.773, 32.417); 
+    this.createATM(1171.759, 2701.804, 38.175); 
 
 	}
 
