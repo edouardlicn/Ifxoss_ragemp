@@ -1,7 +1,7 @@
 const nodemailer = require("nodemailer");
 
 
-class MailerSingleton {
+class MailerSingletone {
     constructor() { 
     
         this.transporter = nodemailer.createTransport({
@@ -45,5 +45,5 @@ class MailerSingleton {
     }
 
 }
-const mailerSingleton = new MailerSingleton();
-module.exports = mailerSingleton;
+const mailerSingletone = new MailerSingletone();
+module.exports = mailerSingletone;
