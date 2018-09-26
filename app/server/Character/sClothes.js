@@ -40,6 +40,7 @@ class ClothesSingletone {
 			{	id: 3, name: "Sneakers", color: 0, colors: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15], price: 550,  },
 			{	id: 4, name: "High Sneakers", color: 0, colors: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15], price: 500,  },
 			{	id: 5, name: "Bedroom Slippers", color: 0, colors: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15], price: 400,  },
+			{	id: 22, name: "Test", color: 0, colors: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15], price: 400,  },
 		];
 
 

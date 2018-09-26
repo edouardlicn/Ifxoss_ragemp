@@ -7,7 +7,7 @@ class HospitalBuilding extends sBuilding {
 		super();
 		this.mainEntranceData = {
 			outPos: {x: -498.184, y: -335.741, z: 34.502, rot: 263.72, dim: 0},
-			inPos: {x: 275.446, y: -1361.11, z: 24.5378, rot: 46.77, dim: 0},
+			inPos: {x: -457.272, y: -367.52, z: -186.459, rot: 10.31, dim: 0},
 		
 			outBlipId: 153,
 			outBlipCol: 75,
@@ -56,7 +56,7 @@ class HospitalBuilding extends sBuilding {
 	}
 
 	createHealingShape() {
-		const startHealCoord = {x: 266.775, y: -1356.136, z: 24.538, rot: 135.53};
+		const startHealCoord = {x: -462.041, y: -363.682, z: -186.462, rot: 7.44};
 		const startHealShape = mp.colshapes.newSphere(startHealCoord.x, startHealCoord.y, startHealCoord.z, 1);
 		mp.markers.new(1, new mp.Vector3(startHealCoord.x, startHealCoord.y, startHealCoord.z - 1), 0.75, { color: [255, 0, 0, 15] });
 
