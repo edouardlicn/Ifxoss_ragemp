@@ -94,7 +94,8 @@ mp.events.add(
 		injectCef(inject);
 	},
 
-	"cMisc-CallServerEvent" : (eventName, id, price) => mp.events.callRemote(eventName, id, price),
+	"cMisc-CallServerEvent" : (eventName, id, price) => mp.events.callRemote(eventName, id, price), 
+  "cMisc-CallServerEventSave" : (eventName, player) => mp.events.callRemote(eventName, player),
 
 	"cMisc-CallServerEvenWithTimeout" : (eventName, timeout) => {
 		setTimeout(() => {
