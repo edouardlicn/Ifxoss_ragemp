@@ -43,8 +43,9 @@ class ATMSingletone {
 	}
 	
 	createATM(x, y, z) {
-		const shape = mp.colshapes.newSphere(x, y, z, 0.5);
+		const shape = mp.colshapes.newSphere(x, y, z, 1.0);
 		shape.atm = true;
+
 		mp.blips.new(500, new mp.Vector3(x, y, z),
 		{
 			name: "ATM",
@@ -103,7 +104,16 @@ class ATMSingletone {
     this.createATM(4.792, -919.794, 29.557);
     this.createATM(-203.802, -861.482, 30.268);
     this.createATM(-303.134, -829.773, 32.417); 
-    this.createATM(1171.759, 2701.804, 38.175); 
+    this.createATM(1171.759, 2701.804, 38.175);
+    this.createATM(-709.938, -819.495, 23.729);
+    this.createATM(-712.841, -819.05, 23.73);
+    this.createATM(-1570.112, -546.583, 34.954);     
+    this.createATM(-1571.062, -547.354, 34.958);
+    this.createATM(-1205.034, -326.22, 37.839); 
+    this.createATM(-1205.703, -324.802, 37.859); 
+    this.createATM(89.539, 2.408, 68.312); 
+    this.createATM(-1827.193, 784.908, 138.303); 
+    this.createATM(-2072.484, -317.492, 13.316);              
 
 	}
 
@@ -119,7 +129,7 @@ class ATMSingletone {
 	}
 
 	async getCash(player, summ) {
-		if (!player.loggedIn || !misc.isValueNumber(summ) || player.money.bank < summ) return;
+		if (!player.loggedIn || !misc.isValueNumber(summ) || player.money.bank < summ || summ <= 0) return;
 		const before = `$${player.money.cash} $${player.money.bank} $${player.money.tax}`;
 		await misc.query(`UPDATE usersMoney SET cash = cash + ${summ}, bank = bank - ${summ} WHERE id = '${player.guid}'`);
 		player.money.cash += summ;
@@ -129,7 +139,7 @@ class ATMSingletone {
 	}
 
 	async putCash(player, summ) {
-		if (!player.loggedIn || !misc.isValueNumber(summ) || player.money.cash < summ) return;
+		if (!player.loggedIn || !misc.isValueNumber(summ) || player.money.cash < summ || summ <= 0) return;
 		const before = `$${player.money.cash} $${player.money.bank} $${player.money.tax}`;
 		await misc.query(`UPDATE usersMoney SET cash = cash - ${summ}, bank = bank + ${summ} WHERE id = '${player.guid}'`);
 		player.money.cash -= summ;
@@ -139,7 +149,7 @@ class ATMSingletone {
 	}
 
 	async getTaxMoney(player, summ) {
-		if (!player.loggedIn || !misc.isValueNumber(summ) || player.money.tax < summ) return;
+		if (!player.loggedIn || !misc.isValueNumber(summ) || player.money.tax < summ || summ <= 0) return;
 		const before = `$${player.money.cash} $${player.money.bank} $${player.money.tax}`;
 		await misc.query(`UPDATE usersMoney SET cash = cash + ${summ}, tax = tax - ${summ} WHERE id = '${player.guid}'`);
 		player.money.cash += summ;
@@ -149,7 +159,7 @@ class ATMSingletone {
 	}
 
 	async putTaxMoney(player, summ) {
-		if (!player.loggedIn || !misc.isValueNumber(summ) || player.money.cash < summ) return;
+		if (!player.loggedIn || !misc.isValueNumber(summ) || player.money.cash < summ || summ <= 0) return;
 		const before = `$${player.money.cash} $${player.money.bank} $${player.money.tax}`;
 		await misc.query(`UPDATE usersMoney SET cash = cash - ${summ}, tax = tax + ${summ} WHERE id = '${player.guid}'`);
 		player.money.cash -= summ;
@@ -159,7 +169,7 @@ class ATMSingletone {
 	}
 
 	async payFine(player, index) {
-		if (!player.loggedIn || !misc.isValueNumber(index) || !player.money.fines[index] || player.money.cash < player.money.fines[index].val) return;
+		if (!player.loggedIn || !misc.isValueNumber(index) || !player.money.fines[index] || player.money.cash < player.money.fines[index].val || summ <= 0) return;
 		const before = `$${player.money.cash} $${player.money.bank} $${player.money.tax}`;
 		const fineValue = player.money.fines[index].val;
 		player.money.cash -= fineValue;

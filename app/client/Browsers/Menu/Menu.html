@@ -267,7 +267,7 @@
             </div>
             <div class="gps" v-if="currentTab === 1">
 				<div class="menu-items" style="border-top: 1px solid #aaa;">
-					<a @click="savequit">Save n quit</a>
+					<a @click="savequit">{{ d.i18n.SaveNquit }}(NOT WORKING)</a>
 					</a>
 				</div>
 			</div>
@@ -333,8 +333,8 @@ class tab {
 				app.exit();
 			}, 
       
-            savequit(player) {
-				mp.trigger("cMisc-CallServerEventSave", "save", player);
+      savequit(id) {
+				mp.trigger("cMisc-CallServerEvent", "save", id);
 				app.exit();
 			},
 		} 
@@ -445,7 +445,7 @@ const app = new Vue({
 				jTime: 'jail time',
 				help: ["Starting", "Vehicle controls"],
 				helpStart1: 'Revive by E,and after countdown you may revive in hospital.And you can heal yourself with information desk.F4 to heal if you are medic.', 
-                helpStart2: '/pos to get location by now.',
+        helpStart2: '/pos to get location by now.',
 				helpStart3: 'Go to orange collector job and earn some money. Then you can personalize your character with buying some clothes and visiting barber shop.',
 				toggle: 'toggle',
 				lock: 'lock',
@@ -460,6 +460,7 @@ const app = new Vue({
 				Old: 'Old',
 				New: 'New',
 				Done: 'Done',
+        SaveNquit: 'Save and quit'
 			}
 		},
 	},
@@ -521,8 +522,8 @@ function loadRusLang() {
 		jTime: 'тюремного срока',
 		help: ["Начало игры", "Управление транспортом"],
 		helpStart1: 'Revive by E,and after countdown you may revive in hospital.And you can heal yourself with information desk.F4 to heal if you are medic.', 
-        helpStart2: '/pos to get location by now.',
-        helpStart3: 'Заработайте немного наличных, работая собирателем апельсинов. После этого вы можете купить себе одежды и изменить стрижку.',
+    helpStart2: '/pos to get location by now.',
+    helpStart3: 'Заработайте немного наличных, работая собирателем апельсинов. После этого вы можете купить себе одежды и изменить стрижку.',
 		toggle: 'состояние',
 		lock: 'замка',
 		engine: 'двигателя',
@@ -565,16 +566,16 @@ function loadZhsLang() {
 		cbDeliveryCourier: 'Clickin Bell 投递员',
 		minLoyality: '最低忠诚点数',
 		findBusBy: '查找商业以',
-		fTank: 'Fuel Tank',
+		fTank: '油量',
 		price: '价格',
-		fRate: 'Fuel Rate',
-		findVehicle: 'Find Vehicle',
-		createRoute: 'Create GPS route',
+		fRate: '油耗',
+		findVehicle: '寻找',
+		createRoute: '创建GPS路径',
 		call911: '打给911',
-		repairAndTransport: 'Repair and transport vehicle to police parking',
-		sellFor: 'Sell for',
-		toDealer: 'to Dealership',
-		sellToPassenger: 'Sell to passenger',
+		repairAndTransport: '维修并把载具送往警局停车场',
+		sellFor: '以',
+		toDealer: '卖给二手车商',
+		sellToPassenger: '卖给乘客',
 		sell: '出售',
 		noVeh: '你没有载具 =(',
 		congrats: '恭喜',
@@ -583,8 +584,8 @@ function loadZhsLang() {
 		minutes: '分钟',
 		jTime: '监狱时间',
 		help: ["开始", "载具控制"], 
-        helpStart1: '死亡后倒数结束时按E在医院复活。你可以在前台加血。当你是医疗职业时可以按F4为对方治疗。', 
-        helpStart2: '命令/pos获取当前位置坐标。',     
+    helpStart1: '死亡后倒数结束时按E在医院复活。你可以在前台加血。当你是医疗职业时可以按F4为对方治疗。', 
+    helpStart2: '命令/pos获取当前位置坐标。',     
 		helpStart3: '去收橙任务赚点钱。然后你可以为你的角色买些衣服和理发。',
 		toggle: '切换',
 		lock: '车锁',
@@ -598,7 +599,8 @@ function loadZhsLang() {
 		password: '密码',
 		Old: '旧',
 		New: '新',
-		Done: '完成',
+		Done: '完成', 
+    SaveNquit: '保存并登出',
   	}
 
 }
@@ -620,16 +622,16 @@ function loadZhtLang() {
 		cbDeliveryCourier: 'Clickin Bell 投遞員',
 		minLoyality: '最低忠誠點數',
 		findBusBy: '查找商業以',
-		fTank: 'Fuel Tank',
+		fTank: '油量',
 		price: '價格',
-		fRate: 'Fuel Rate',
-		findVehicle: 'Find Vehicle',
-		createRoute: 'Create GPS route',
+		fRate: '油耗',
+		findVehicle: '尋找載具',
+		createRoute: '設置GPS線路',
 		call911: '打給911',
-		repairAndTransport: 'Repair and transport vehicle to police parking',
-		sellFor: 'Sell for',
-		toDealer: 'to Dealership',
-		sellToPassenger: 'Sell to passenger',
+		repairAndTransport: '修理并將載具送往警察停車場',
+		sellFor: '以',
+		toDealer: '賣給二手車商',
+		sellToPassenger: '賣給乘客',
 		sell: '出售',
 		noVeh: '你沒有載具 =(',
 		congrats: '恭喜',
@@ -638,8 +640,8 @@ function loadZhtLang() {
 		minutes: '分鐘',
 		jTime: '監獄時間',
 		help: ["開始", "載具控制"],
-        helpStart1: '死亡後倒數結束時按E在醫院復活。妳可以在前臺加血。當你是醫療職業時可以按F4治療。',
-        helpStart2: '命令/pos獲取當前位置座標。',    
+    helpStart1: '死亡後倒數結束時按E在醫院復活。妳可以在前臺加血。當你是醫療職業時可以按F4治療。',
+    helpStart2: '命令/pos獲取當前位置座標。',    
 		helpStart3: '去收橙任務掙點錢。然後你可以為你的角色買些衣服和理髮。',
 		toggle: '切換',
 		lock: '車鎖',
@@ -654,6 +656,7 @@ function loadZhtLang() {
 		Old: '舊',
 		New: '新',
 		Done: '完成',
+    SaveNquit: '儲存并登出',
   	}
 }
 </script>

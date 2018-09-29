@@ -7,7 +7,7 @@ class HospitalBuilding extends sBuilding {
 		super();
 		this.mainEntranceData = {
 			outPos: {x: -498.184, y: -335.741, z: 34.502, rot: 263.72, dim: 0},
-			inPos: {x: -457.272, y: -367.52, z: -186.459, rot: 10.31, dim: 0},
+			inPos: {x: 275.414, y: -1361.369, z: 24.538, rot: 217.45, dim: 0},    
 		
 			outBlipId: 153,
 			outBlipCol: 75,
