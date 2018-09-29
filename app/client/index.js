@@ -15,4 +15,5 @@ require('./Factions/cPolice.js');
 require('./Factions/cPrison.js');
 require('./Basic/cMenu');
 require('./Basic/cGPS');
-require('./Playerblips/index.js');
+require('./Tools/Playerblips/index.js');
+

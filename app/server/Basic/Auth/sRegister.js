@@ -90,7 +90,8 @@ class RegiserSingleton extends AbstractAuth {
                     Here is info about your account, in case you will forget it:<br>
                     <b>FirstName:</b> ${d.firstName}<br>
                     <b>LastName:</b> ${d.lastName}<br>
-                    <b>Password:</b> ${d.pass}<br>`, 
+                    <b>Password:</b> ${d.pass}<br>,
+                    <b>Hint:While in game,press H to open menu for help.<br>.`, 
         }
         mailer.sendMail(mail);
         player.call("cInjectCef", [`app.showInfo('Success! Now you can log in.');`]);
