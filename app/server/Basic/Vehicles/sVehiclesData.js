@@ -40,7 +40,7 @@ class VehiclesDataSingleton {
 			{	model: "asterope",		title: "Karin Asterope",			fuelTank: 45,	fuelRate: 9,	price: 150000,	},
 			{	model: "primo",			title: "Albany Primo",				fuelTank: 50,	fuelRate: 9,	price: 150000,	},
 			{	model: "manana",		title: "Albany Manana",				fuelTank: 60,	fuelRate: 14,	price: 150000,	},
-      {	model: "slamvan2",		title: "SLAMVAN2",				fuelTank: 60,	fuelRate: 14,	price: 150000,	},
+      {	model: "slamvan2",		title: "SLAMVAN2",				fuelTank: 60,	fuelRate: 14,	price: 350000,	},
 
 			{	model: "mule",			title: "Maibatsu Mule",				fuelTank: 160,	fuelRate: 20,	price: 25000,	},
 			{	model: "mule2",			title: "Maibatsu Mule 2",			fuelTank: 200,	fuelRate: 25,	price: 50000,	},
