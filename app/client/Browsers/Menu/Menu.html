@@ -263,6 +263,12 @@
 							<a @click="changePass()" >{{ d.i18n.Done }}</a>
 						</div>
 					</div>
+				</div>   
+            </div>
+            <div class="gps" v-if="currentTab === 1">
+				<div class="menu-items" style="border-top: 1px solid #aaa;">
+					<a @click="savequit">{{ d.i18n.SaveNquit }}(NOT WORKING)</a>
+					</a>
 				</div>
 			</div>
 		</div>
@@ -325,8 +331,14 @@ class tab {
 				}
 				mp.trigger("cMisc-CallServerEvent", "sVehicle-SellToPlayer", JSON.stringify(str));
 				app.exit();
+			}, 
+      
+      savequit(id) {
+				mp.trigger("cMisc-CallServerEvent", "save", id);
+				app.exit();
 			},
-		}
+		} 
+    
 		this.computed = {
 			total: function () {
 				let total = 0;
@@ -336,6 +348,7 @@ class tab {
 				return total;
 			},
 		}
+    
 		const tab = Vue.component(`tab${tabNumber++}`, { 
 			props: ['d'],
 			data: this.data,
@@ -440,13 +453,14 @@ const app = new Vue({
 				front: 'front',
 				rear: 'rear',
 				windows: 'windows',
-				settings: ["Basic"],
+				settings: ["Basic", "Save and quit"],
 				Change: 'Change',
 				language: 'language',
 				password: 'password',
 				Old: 'Old',
 				New: 'New',
 				Done: 'Done',
+        SaveNquit: 'Save and quit'
 			}
 		},
 	},
@@ -552,16 +566,16 @@ function loadZhsLang() {
 		cbDeliveryCourier: 'Clickin Bell 投递员',
 		minLoyality: '最低忠诚点数',
 		findBusBy: '查找商业以',
-		fTank: 'Fuel Tank',
+		fTank: '油量',
 		price: '价格',
-		fRate: 'Fuel Rate',
-		findVehicle: 'Find Vehicle',
-		createRoute: 'Create GPS route',
+		fRate: '油耗',
+		findVehicle: '寻找',
+		createRoute: '创建GPS路径',
 		call911: '打给911',
-		repairAndTransport: 'Repair and transport vehicle to police parking',
-		sellFor: 'Sell for',
-		toDealer: 'to Dealership',
-		sellToPassenger: 'Sell to passenger',
+		repairAndTransport: '维修并把载具送往警局停车场',
+		sellFor: '以',
+		toDealer: '卖给二手车商',
+		sellToPassenger: '卖给乘客',
 		sell: '出售',
 		noVeh: '你没有载具 =(',
 		congrats: '恭喜',
@@ -579,13 +593,14 @@ function loadZhsLang() {
 		front: '前',
 		rear: '后',
 		windows: '窗户',
-		settings: ["基本"],
+		settings: ["基本", "保存退出"],
 		Change: '修改',
 		language: '语言',
 		password: '密码',
 		Old: '旧',
 		New: '新',
-		Done: '完成',
+		Done: '完成', 
+    SaveNquit: '保存并登出',
   	}
 
 }
@@ -607,16 +622,16 @@ function loadZhtLang() {
 		cbDeliveryCourier: 'Clickin Bell 投遞員',
 		minLoyality: '最低忠誠點數',
 		findBusBy: '查找商業以',
-		fTank: 'Fuel Tank',
+		fTank: '油量',
 		price: '價格',
-		fRate: 'Fuel Rate',
-		findVehicle: 'Find Vehicle',
-		createRoute: 'Create GPS route',
+		fRate: '油耗',
+		findVehicle: '尋找載具',
+		createRoute: '設置GPS線路',
 		call911: '打給911',
-		repairAndTransport: 'Repair and transport vehicle to police parking',
-		sellFor: 'Sell for',
-		toDealer: 'to Dealership',
-		sellToPassenger: 'Sell to passenger',
+		repairAndTransport: '修理并將載具送往警察停車場',
+		sellFor: '以',
+		toDealer: '賣給二手車商',
+		sellToPassenger: '賣給乘客',
 		sell: '出售',
 		noVeh: '你沒有載具 =(',
 		congrats: '恭喜',
@@ -634,13 +649,14 @@ function loadZhtLang() {
 		front: '前',
 		rear: '后',
 		windows: '窗戶',
-		settings: ["基本"],
+		settings: ["基本", "儲存退出"],
 		Change: '修改',
 		language: '語言',
 		password: '密碼',
 		Old: '舊',
 		New: '新',
 		Done: '完成',
+    SaveNquit: '儲存并登出',
   	}
 }
 </script>
