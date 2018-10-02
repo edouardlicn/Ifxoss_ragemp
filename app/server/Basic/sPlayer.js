@@ -14,8 +14,8 @@ class PlayerSingleton {
 
     async createNewUser(player, email, firstName, lastName, pass) {
         const firstSpawn = { 
-            x: -164, 
-            y: 6426, 
+            x: -179, 
+            y: -163, 
             z: 32, 
             rot: 48, 
             dim: 0, 

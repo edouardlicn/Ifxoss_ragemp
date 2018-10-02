@@ -55,7 +55,7 @@ class Hospital extends sFaction {
 			
 		});
 
-		const pos = {x: -473.979, y: -342.833, z: -186.485, rot: 89.37};
+		const pos = {x: 268.457, y: -1365.145, z: 24.538, rot: 144.58};
 		this.createClothingShape(pos);
 		this.createEvents();
 	}
@@ -71,7 +71,7 @@ class Hospital extends sFaction {
 		const pay = misc.roundNum(dist / 20);
 		player.newFine(pay, `${i18n.get('sHospital', 'transferTo', player.lang)}`);
 
-		const tp = { x: -457.272, y: -367.52, z: -186.459, rot: 10.31, dim: 0 };
+		const tp = { x: 275.446, y: -1361.11, z: 24.5378, rot: 46.77, dim: 0 };
 		player.tp(tp);
 		misc.log.debug(`${player.name} transfered to Hospital. Fine: $${pay}`);
 	}
@@ -207,8 +207,8 @@ module.exports.loadUser = loadUser;
 
 
 mp.events.addCommand({
-	'sethospitalleader' : async (player, id) => { 
-    if (player.adminLvl < 1) return;
+	'sethospitalleader' : async (player, id) => {
+		if (misc.getAdminLvl(player) < 1) return;
 		hospital.setAsLeader(player, +id);
 	},	
 });
