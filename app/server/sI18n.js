@@ -305,13 +305,13 @@ const i18n = {
 			zht: '!{#00ed00}與飼服器上的其它玩家聊天：!{#FFFFFF}/g [message]',
 		}, 
 	
-		annouceOldUser: {
-			eng: 'If you have account in old server version and want restore data, write here in chat your old name. I will check it in logs',
-			rus: 'Если у вас есть аккаунт на старом сервере, напишите в чате старое имя. Я посмотрю это по логам',
-			ger: 'Wenn Sie einen Account haben und Daten wiederherstellen möchten, schreiben Sie hier im Chat Ihren alten Namen. Ich werde es in den Logs überprüfen',
-			br: 'Se você tem conta na versão antiga do servidor e deseja restaurar os dados, escreva aqui no bate-papo seu nome antigo. Vou verificar nos logs', 
-			zhs: '如果你有旧版服务器账户且希望恢复它，在聊天栏留下你的用户名和需求。我会在日志中查阅。',
-			zht: '如果你有舊版服務器帳戶且希望恢復它，在聊天欄留下你的用戶名和需求。我會在日誌中檢查。',
+		annouceContect: {
+			eng: 'Any problems please contect !{#FF8555}webmaster@server.mail.',
+			rus: '',
+			ger: '',
+			br: '', 
+			zhs: '任何问题请发信至 !{#FF8555}webmaster@server.mail。',
+			zht: '任何問題請發郵件至 !{#FF8555}webmaster@server.mail。',
 		},
 		
     
