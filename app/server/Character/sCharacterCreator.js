@@ -31,10 +31,10 @@ class CharCreator {
 				const q3 = headOverlaySingleton.loadUser(player);
 				await Promise.all([q1, q2, q3]);
 				const firstSpawn = { 
-					x: -164, 
-					y: 6426, 
-					z: 32, 
-					rot: 48, 
+					x: -471.75, 
+					y: -362.102, 
+					z: 34, 
+					rot: 192.63, 
 					dim: 0, 
 				}
 				player.tp(firstSpawn);
