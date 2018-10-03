@@ -69,7 +69,7 @@ class RegiserSingleton extends AbstractAuth {
 
     async createAccount(player, d) {
         const pass = this.hashPassword(d.pass);
-        await playerSingleton.createNewUser(player, d.email, d.firstName, d.lastName, pass);
+        await playerSingleton.createNewUser(player, d.email, d.firstName, d.lastName, pass, d.lang);
         const data = await misc.query(`SELECT id FROM users ORDER BY id DESC LIMIT 1`);
         const q1 = moneySingleton.createNewUser(data[0].id);
         const q2 = characterSingleton.createNewUser(data[0].id);
