@@ -99,21 +99,21 @@ class ATMSingletone {
 		this.createATM(2683, 3286.5, 55.21);
 		this.createATM(-611.92, -704.75, 31.26);
 		this.createATM(-614.6, -704.75, 31.26);
-    this.createATM(-526.679, -1222.894, 18.455);
-    this.createATM(2559.559, 350.864, 108.622); 
-    this.createATM(4.792, -919.794, 29.557);
-    this.createATM(-203.802, -861.482, 30.268);
-    this.createATM(-303.134, -829.773, 32.417); 
-    this.createATM(1171.759, 2701.804, 38.175);
-    this.createATM(-709.938, -819.495, 23.729);
-    this.createATM(-712.841, -819.05, 23.73);
-    this.createATM(-1570.112, -546.583, 34.954);     
-    this.createATM(-1571.062, -547.354, 34.958);
-    this.createATM(-1205.034, -326.22, 37.839); 
-    this.createATM(-1205.703, -324.802, 37.859); 
-    this.createATM(89.539, 2.408, 68.312); 
-    this.createATM(-1827.193, 784.908, 138.303); 
-    this.createATM(-2072.484, -317.492, 13.316);              
+	    this.createATM(-526.679, -1222.894, 18.455);
+    	this.createATM(2559.559, 350.864, 108.622); 
+   	 	this.createATM(4.792, -919.794, 29.557);
+    	this.createATM(-203.802, -861.482, 30.268);
+    	this.createATM(-303.134, -829.773, 32.417); 
+    	this.createATM(1171.759, 2701.804, 38.175);
+    	this.createATM(-709.938, -819.495, 23.729);
+    	this.createATM(-712.841, -819.05, 23.73);
+    	this.createATM(-1570.112, -546.583, 34.954);     
+    	this.createATM(-1571.062, -547.354, 34.958);
+   		this.createATM(-1205.034, -326.22, 37.839); 
+    	this.createATM(-1205.703, -324.802, 37.859); 
+    	this.createATM(89.539, 2.408, 68.312); 
+    	this.createATM(-1827.193, 784.908, 138.303); 
+    	this.createATM(-2072.484, -317.492, 13.316);              
 
 	}
 
