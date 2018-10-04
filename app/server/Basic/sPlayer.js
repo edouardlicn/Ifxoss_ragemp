@@ -14,10 +14,10 @@ class PlayerSingleton {
 
     async createNewUser(player, email, firstName, lastName, pass) {
         const firstSpawn = { 
-            x: -164, 
-            y: 6426, 
-            z: 32, 
-            rot: 48, 
+            x: -471.75, 
+            y: -362.102, 
+            z: 34, 
+            rot: 192.63, 
             dim: 0, 
         }
         await misc.query(`INSERT INTO users 

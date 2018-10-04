@@ -23,6 +23,8 @@
 				<span v-if="mailChecked && nameChecked">
 					<input type="text" class="textinput" placeholder="Password" v-model="enteredPass1" :class="{ checked: passChecked }">
 					<input type="text" class="textinput" placeholder="Confirm password" v-model="enteredPass2" @input="verifyPass" :class="{ checked: passChecked }">
+          <input type="text" class="textinput" placeholder="eng" v-model="lang" :class="{ checked: passChecked }">
+          <p>Select your language here,eng by default,can be rus ger br zhs zht.</p>
 				</span>
 			
 				<div class="button" v-if="mailChecked && nameChecked && passChecked" @click="createAccount">Create account</div>

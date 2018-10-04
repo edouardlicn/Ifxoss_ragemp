@@ -46,7 +46,7 @@ class cVehicle {
 		const vehicle = player.vehicle;
 		if (!vehicle || mp.gui.cursor.visible) return;
 		this.speed = misc.roundNum(vehicle.getSpeed() * 4);
-		mp.game.graphics.drawText("     Speed: " + this.speed + " km/h", [0.920, 0.835], { 
+		mp.game.graphics.drawText("  Speed: " + this.speed + " km/h", [0.920, 0.835], { 
 			font: 1, 
 			color: [255, 255, 255, 255], 
 			scale: [0.6, 0.6], 
@@ -56,7 +56,7 @@ class cVehicle {
 	showFuel() {
 		const vehicle = player.vehicle;
 		if (mp.gui.cursor.visible || !vehicle || this.fuel === null || !vehicle.getIsEngineRunning()) return;
-		mp.game.graphics.drawText("         Fuel: " + this.fuel.toFixed(1) + " L", [0.927, 0.80], { 
+		mp.game.graphics.drawText("   Fuel: " + this.fuel.toFixed(1) + " L", [0.927, 0.80], { 
 			font: 1, 
 			color: [255, 255, 255, 255], 
 			scale: [0.6, 0.6], 

@@ -47,8 +47,8 @@ class LoginSingleton extends AbstractAuth {
 
         player.outputChatBox(`${i18n.get('sLogin', 'annouceSpawnVehicle', player.lang)}`);
         player.outputChatBox(`${i18n.get('sLogin', 'annouceGlobalChat', player.lang)}`);
-        player.outputChatBox(`${i18n.get('sLogin', 'annouceOldUser', player.lang)}`);
         player.outputChatBox(`${i18n.get('sLogin', 'annoucePlayerMenu', player.lang)}`);
+        player.outputChatBox(`${i18n.get('sLogin', 'annouceContect', player.lang)}`);
         const onlinePlayers = mp.players.toArray();
         if (onlinePlayers.length < 30) {
             for (const p of onlinePlayers) {

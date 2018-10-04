@@ -21,7 +21,7 @@ class AbstractAuth {
             html: `<b>Hello!</b><br>Your verification code is: ${code}`,
         }
         mailer.sendMail(mail);
-        player.call("cInjectCef", [`app.showInfo('Please check your mailbox!');`]);
+        player.call("cInjectCef", [`app.showInfo('Verify code sent to your Email,Please check your mailbox.');`]);
     }
 
     hashPassword(str) {

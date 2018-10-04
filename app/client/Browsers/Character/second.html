@@ -47,7 +47,6 @@ const app = new Vue({
 			"Chin shape",
 			"Neck width"
 		],
-
 		i18n: {
 			rot: "rotation",
 			next: "Next",
@@ -70,8 +69,6 @@ const app = new Vue({
 		},
 	}
 });
-
-
 function loadRusLang() {
 	app.faceDataNames = [
 		"Ширина носа", 
@@ -100,7 +97,6 @@ function loadRusLang() {
 		next: "Далее",
 	};
 }
-
 function loadGerLang() {
 	app.faceDataNames = [
 		"Die Breite der Nase", 
@@ -129,15 +125,62 @@ function loadGerLang() {
 		next: "Weiter",
 	};
 }
-
 function loadBrLang() {
 }
-
-function loadZhsLang() {
-
-}
-
 function loadZhtLang() {
-
+  	app.faceDataNames = [
+		"鼻寬度", 
+		"鼻高度", 
+		"鼻長度", 
+		"鼻樑", 
+		"鼻尖", 
+		"鼻樑傾斜", 
+		"眉毛高度", 
+		"眉毛寬度", 
+		"顴骨高度", 
+		"顴骨寬度", 
+		"臉頰寬度", 
+		"眼睛", 
+		"嘴唇", 
+		"下巴寬度", 
+		"下巴高度", 
+		"頦長", 
+		"頦位置", 
+		"頦寬", 
+		"頦形狀",
+		"脖子寬度"
+	];
+	app.i18n = {
+		rot: "旋轉",
+		next: "下一步",
+	};
+}
+function loadZhsLang() {
+  	app.faceDataNames = [
+		"鼻宽度", 
+		"鼻高度", 
+		"鼻长度", 
+		"鼻梁", 
+		"鼻尖", 
+		"鼻梁倾斜", 
+		"眉毛高度", 
+		"眉毛宽度", 
+		"颧骨高度", 
+		"颧骨宽度", 
+		"脸颊宽度", 
+		"眼睛", 
+		"嘴唇", 
+		"下巴宽度", 
+		"下巴高度", 
+		"颏长", 
+		"颏位置", 
+		"颏宽", 
+		"颏形状",
+		"脖子宽度"
+	];
+	app.i18n = {
+		rot: "旋转",
+		next: "下一步",
+	};
 }
 </script>
