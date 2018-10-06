@@ -81,7 +81,8 @@ class VehicleSingleton {
 		});
 
 
-		mp.events.addCommand({	
+		mp.events.addCommand({	    
+    /*
 			'v' : (player, fullText, model) => {
 				if (player.adminLvl < 1) return;
 				if (!model) return player.notify("Model required");
@@ -129,11 +130,7 @@ class VehicleSingleton {
 				player.notify(`${i18n.get('sVehicle', 'helpUnlock', player.lang)}`);
 				player.notify(`${i18n.get('sVehicle', 'helpEngine', player.lang)}`);		
 			},
-		
-			'tp' : (player, fullText, a, b, c) => { 
-				if (player.adminLvl < 1) return;
-				player.position = new mp.Vector3(+a, +b, +c);
-			},
+		  */
 		
 		});
 	}
