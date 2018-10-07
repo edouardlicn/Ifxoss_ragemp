@@ -82,7 +82,7 @@ class VehicleSingleton {
 
 
 		mp.events.addCommand({	    
-    /*
+    
 			'v' : (player, fullText, model) => {
 				if (player.adminLvl < 1) return;
 				if (!model) return player.notify("Model required");
@@ -130,7 +130,7 @@ class VehicleSingleton {
 				player.notify(`${i18n.get('sVehicle', 'helpUnlock', player.lang)}`);
 				player.notify(`${i18n.get('sVehicle', 'helpEngine', player.lang)}`);		
 			},
-		  */
+
 		
 		});
 	}
