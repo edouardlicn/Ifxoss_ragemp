@@ -12,7 +12,7 @@ const prison = require('../Factions/Police/Prison/sPrison');
 
 class PlayerSingleton {
 
-    async createNewUser(player, email, firstName, lastName, pass) {
+    async createNewUser(player, email, firstName, lastName, pass, lang) {
         const firstSpawn = { 
             x: -471.75, 
             y: -362.102, 
@@ -21,8 +21,8 @@ class PlayerSingleton {
             dim: 0, 
         }
         await misc.query(`INSERT INTO users 
-        (email, firstName, lastName, password, ip, regdate, position, socialclub) VALUES 
-        ('${email}', '${firstName}', '${lastName}', '${pass}', '${player.ip}', '${new Date().toLocaleString()}', '${JSON.stringify(firstSpawn)}', '${player.socialClub}')`);
+        (email, firstName, lastName, password, ip, regdate, position, lang, socialclub) VALUES 
+        ('${email}', '${firstName}', '${lastName}', '${pass}', '${player.ip}', '${new Date().toLocaleString()}', '${JSON.stringify(firstSpawn)}', '${player.lang}', '${player.socialClub}')`);
 
         misc.log.debug(`New Account: ${email} | ${firstName} ${lastName}`);
     }
@@ -162,7 +162,8 @@ mp.events.addCommand({
         const str = `x: ${misc.roundNum(pos.x, 3)}, y: ${misc.roundNum(pos.y, 3)}, z: ${misc.roundNum(pos.z, 3)}, rot: ${misc.roundNum(rot, 2)}`;
         player.outputChatBox(str);
         misc.log.debug(str);
-    },     
+    }, 
+     
     
 }); 
 
@@ -196,7 +197,8 @@ mp.events.addCommand({
          let playert = mp.players.at(targetID); //https://wiki.rage.mp/index.php?title=Pool::at
          console.log(`${playert.name}`);
          
-    },
+    }, 
+    
 
     
 });   
